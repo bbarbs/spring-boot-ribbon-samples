@@ -16,7 +16,6 @@ import static org.springframework.http.MediaType.TEXT_PLAIN_VALUE;
 )
 public interface SampleClient {
 
-
     @GetMapping(
             value = "/test",
             produces = TEXT_PLAIN_VALUE
