@@ -50,3 +50,34 @@ Enable the eureka client discovery.
 @EnableEurekaClient
 public class CustomerApplication {
 ```
+
+## Testing
+First run the eureka server which is server project. After running the server check the http://localhost:8761/ to determine if is good and up.
+<br/>
+Then run the gateway project.
+<br/>
+Then in customer project run **gradle build** to generate jar, and run the jar in different ports **9090, 9091, 9092**.
+> ex: java -Dserver.port=9090 -jar customer-0.0.1-SNAPSHOT.jar
+
+
+When everything is running check again the http://localhost:8761/ and you can see the instance of projects running.
+![](https://github.com/bbarbs/spring-boot-ribbon-samples/blob/master/spring-boot-ribbon-eureka/test-results/eureka%20server.PNG)
+<br/>
+<br/>
+
+Then check http://localhost:8080/feign/test or http://localhost:8080/resttemplate/test to check the load balancing when you refresh the browser the port will change like the ff:
+<br/>
+<br/>
+![](https://github.com/bbarbs/spring-boot-ribbon-samples/blob/master/spring-boot-ribbon-eureka/test-results/port%209090.PNG)
+<br/>
+<br/>
+
+![](https://github.com/bbarbs/spring-boot-ribbon-samples/blob/master/spring-boot-ribbon-eureka/test-results/port%209091.PNG)
+<br/>
+<br/>
+
+![](https://github.com/bbarbs/spring-boot-ribbon-samples/blob/master/spring-boot-ribbon-eureka/test-results/port%209092.PNG)
+<br/>
+<br/>
+
+
