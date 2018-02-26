@@ -33,7 +33,16 @@ Without this we will encounter a error: **java.lang.IllegalStateException: No in
 To test ribbon run the customer jar in different ports **8090, 8091, 8092**.
 > java -Dserver.port=8090 -jar customer-0.0.1-SNAPSHOT.jar
 
-Then the gateway project in port **8080**. After running those project check the http://localhost:8080/resttemplate/test.
+Then the gateway project in port **8080**. After running those project check the http://localhost:8080/resttemplate/test. When you refresh the page port will change. See test results [here](https://github.com/bbarbs/spring-boot-ribbon-samples/tree/master/spring-boot-ribbon-without-eureka/test-results)
+<br/>
+<br/>
+![](https://github.com/bbarbs/spring-boot-ribbon-samples/blob/master/spring-boot-ribbon-without-eureka/test-results/port%208090.PNG)
+<br/>
+<br/>
+![](https://github.com/bbarbs/spring-boot-ribbon-samples/blob/master/spring-boot-ribbon-without-eureka/test-results/port%208091.PNG)
+<br/>
+<br/>
+![](https://github.com/bbarbs/spring-boot-ribbon-samples/blob/master/spring-boot-ribbon-without-eureka/test-results/port%208092.PNG)
 
 
 
