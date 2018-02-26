@@ -45,6 +45,7 @@ public class WebController {
             produces = TEXT_PLAIN_VALUE
     )
     public String test() {
-        return "Request to customer service running on port: " + port;
+        return "Eureka Implementation \n " +
+                "Request to customer service running on port: " + port;
     }
 }
